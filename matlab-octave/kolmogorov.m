@@ -33,7 +33,7 @@ function a = kolmogorov(dim, r0, orig)
     % Compute the size of the minimum array which holds the phase screen over
     % the pupil.
     n = 2^int32(ceil(log2(dim - 1))) + 1;
-    delta = sqrt(6.88*(dim/r0)^(5/3));
+    delta = sqrt(6.88*(double(n-1)/r0)^(5/3));
 
     beta = 1.7817974; % 2^(5/6)
     c1 = 3.3030483e-1*delta;
